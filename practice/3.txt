@@ -1,0 +1,125 @@
+#include<iostream>
+#include<string>
+#include<fstream>
+#include<cctype>
+#include<array>
+
+using namespace std;
+void showmenu(void)
+{
+	cout << endl << endl;
+	cout << "   a)begin" << endl << endl;
+	cout << "   b)setting" << endl << endl;
+	cout << "   c)setting1" << endl << endl;
+	cout << "   d)setting2" << endl << endl;
+	cout << "   e)setting3" << endl << endl;
+}
+int main(void) {
+	
+	
+	/*int numbers[] = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14 };
+
+	ofstream foutput("ToPractiseagain.txt");
+
+	int numbers_size = sizeof(numbers)/sizeof(numbers[0]);
+	for (int i = 0; i < numbers_size; i++)
+	{
+		foutput << numbers[i] << endl;
+	}
+	
+	foutput.close();
+	cout << numbers_size;
+	cin.get();*/
+
+	/*char ch;
+	int ct1, ct2;
+	ct1 = ct2 = 0;
+
+	while ((ch = cin.get()) != '$')
+	{
+		cout << ch;
+		ct1++;
+		if (ch == '$')
+			ct2++;
+		cout << ch;
+	}
+	cout << "ct1= " << ct1 << ",ct2= " << ct2 << endl;
+	return 0;*/
+	/*int x;
+	(cin >> x).get();
+	cout << (x >= 0 ? x : -x);*/
+
+	/*int line = 1;
+	char ch;
+	
+	while (cin.get(ch)&&ch!='Q')
+	{
+		
+		if (ch == '\n')
+			line++;
+	}
+
+	cout << line;*/
+
+	/*char ch;*/
+	/*while (cin.get(ch) && ch != '@')
+	{
+		if (islower(ch))
+			ch = toupper(ch);
+		else if (isupper(ch))
+			ch = tolower(ch);
+		
+		
+		
+	}*/
+	/*array<double,10>test1;
+
+	double donation;
+	double sum = 0;
+	int cnt = 0;
+
+	cout << "Please enter numbers:\n";
+	for (int i = 0; i < 10; i++)
+	{
+		if (cin >> donation)
+		{
+			test1[i] = donation;
+			cnt++;
+			sum += donation;
+		}
+		else
+			break;
+			
+	}
+	double average = sum / cnt;
+	int cnt1 = 0;
+	for (int i = 0; i < cnt; i++)
+	{
+		if (test1[i] > average)
+			cnt1++;
+	}
+	cout << "The average is:"<<average<<endl;
+	cout << "There are " << cnt1 << " numbers bigger than average.";*/
+	
+	/*showmenu();
+	
+	
+	char ch;
+	while (1)
+	{
+		int cnt2 = 1;
+		cout << "Please enter a,b,c,d or e:";
+		cin.get(ch).get();
+		switch (ch)
+		{
+		case 'a':cout << "aaaaaaa"; break;
+		case 'b':cout << "bbbbbbb"; break;
+		case 'c':cout << "ccccccc"; break;
+		case 'd':cout << "ddddddd"; break;
+		case 'e':cout << "eeeeeee"; break;
+		default:cnt2 = 0;
+		}
+		if (cnt2)
+			break;
+	}*/
+}

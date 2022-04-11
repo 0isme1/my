@@ -1,0 +1,111 @@
+#include<iostream>
+
+#define strsize 20
+using namespace std;
+void showchoice(void);
+struct bop
+{
+	char fullname[strsize];
+	char title[strsize];
+	char bopname[strsize];
+	int preference;
+};
+int main(void)
+{
+	bop member[3] =
+	{
+		{
+			"tao yan",
+			"1111111",
+			"001",
+			2
+		},
+		{
+			"tao xin",
+			"2222222",
+			"002",
+			0
+		},
+		{
+			"tao ziyi",
+			"3333333",
+			"003",
+			1
+		}
+	};
+	showchoice();
+	cout << "enter your mind:";
+	char choice;
+	while (cin.get(choice).get())
+	{
+		int cnt = 0;
+		if (choice == 'a' || choice == 'b' || choice == 'c' || choice == 'd' || choice == 'q')
+		{
+			
+			switch (choice)
+			{
+			case 'a':
+				cout << endl;
+				for (int i = 0; i < 3; i++)
+				{
+					cout <<"     "<< member[i].fullname << endl;
+				}
+				cout << "\nNext:";
+				break;
+			case 'b':
+				cout << endl;
+				for (int i = 0; i < 3; i++)
+				{
+					cout << "     " << member[i].title << endl;
+				}
+				cout << "\nNext:";
+				break;
+			case 'c':
+				cout << endl;
+				for (int i = 0; i < 3; i++)
+				{
+					cout << "     " << member[i].bopname << endl;
+				}
+				cout << "\nNext:";
+				break;
+			case 'd':
+				cout << endl;
+				for (int i = 0; i < 3; i++)
+				{
+					switch (member[i].preference)
+					{
+					case 0:
+						cout << "     " << member[i].fullname<<endl;
+						break;
+					case 1:
+						cout << "     " << member[i].title<<endl;
+						break;
+					case 2:
+						cout << "     " << member[i].bopname<<endl;
+						break;
+					}
+				}
+				cout << "\nNext:";
+				break;
+			case 'q':cnt = 1;
+			}
+		}
+		else
+			cout << "Enter again:";
+		if (cnt)
+		{
+			cout << "Bye";
+			break;
+		}
+
+	}
+	return 0;
+}
+
+
+void showchoice(void)
+{
+	cout << "     a.display by name      b.display by title\n";
+	cout << "     c.display by bopname   d.display by preference\n";
+	cout << "     q.quit";
+}
